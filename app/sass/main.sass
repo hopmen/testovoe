@@ -1,0 +1,100 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a
+	color: $blue
+	transition: color .2s
+
+	&:hover
+		color: $red
+		text-decoration: none
+
+input, textarea
+	outline: none
+
+	&:focus:required:invalid
+		border-color: red
+
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: 'Open Sans', serif
+	line-height: 1.65
+	overflow-x: hidden
+	color: $text
+	overflow-y: scroll
+
+.h-88px
+	height: 88px
+
+.container
+	max-width: 960px
+
+.logo
+	flex: 0 0 14%
+	max-width: 14%
+	padding-right: 10px
+	padding-left: 10px
+	h1
+		font-size: 0
+
+.nav
+	max-width: 760px
+	padding: 0 5px
+
+nav
+	ul
+		display: flex
+		list-style: none
+		padding: 0
+		height: 100%
+		align-items: center
+		justify-content: center
+		margin: 0
+
+	li
+		margin: 0 10px
+
+		&:last-child
+			margin-right: 0
+
+		&:first-child
+			margin-left: 0
+
+	a
+		font-size: 1em
+		color: rgb(9, 20, 8)
+		line-height: 1.2
+		font-weight: 300
+		display: block
+		padding: 2px
+
+.search
+	margin-left: 22px
+
+	button
+		border: 0
+		background-color: rgb(219, 214, 210)
+		width: 50px
+		height: 50px
+		display: flex
+
+		svg
+			overflow: hidden
+			vertical-align: middle
+			display: block
+			width: 55%
+			height: 55%
+			margin: auto
