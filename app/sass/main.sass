@@ -47,14 +47,15 @@ body
 	max-width: 14%
 	padding-right: 10px
 	padding-left: 10px
+
 	h1
 		font-size: 0
 
-.nav
+
+.main-nav
 	max-width: 760px
 	padding: 0 5px
 
-nav
 	ul
 		display: flex
 		list-style: none
@@ -81,6 +82,9 @@ nav
 		display: block
 		padding: 2px
 
+		&:hover
+			color: $red
+
 .search
 	margin-left: 22px
 
@@ -98,3 +102,177 @@ nav
 			width: 55%
 			height: 55%
 			margin: auto
+
+.nav-bar
+	background-color: rgba(241, 239, 237, .7)
+	position: absolute
+	right: 0
+	top: 100%
+	z-index: 100
+	padding: 10px 25px 15px
+	display: block
+
+	ul
+		margin: 0
+		padding: 0
+		display: flex
+		list-style: none
+
+		li
+			margin-right: 25px
+
+			&:last-child
+				margin-right: 0
+
+		a
+			font-size: .9em
+			color: rgb(83, 86, 90)
+			display: flex
+			align-items: center
+			transition: color .2s
+
+
+			svg
+				height: 18px
+				padding-right: 7px
+
+				& .icon-doctor, & .icon-ear, & .icon-ice
+					transition: fill .2s
+
+			&:hover
+				color: $red
+
+				& .icon-doctor, & .icon-ear, & .icon-ice
+					fill: $red
+
+.carousel-indicators--baner
+	margin-bottom: 2.8rem
+
+.baner-dot
+	height: 9px !important
+	width: 41px !important
+	background: #f0eeec !important
+	padding: 0 !important
+	border: 0 !important
+	border-radius: 10px !important
+	opacity: 1 !important
+	margin: 0 9px !important
+	box-shadow: -2px -2px 2px #c5bcb6
+	transition: .3s !important
+
+	&:hover
+		background: rgb(195, 234, 242) !important
+		box-shadow: -2px -2px 2px #b2c3c9
+
+	&.active
+		background: #39a1b8 !important
+		transform: translate(-2px, -2px) !important
+		box-shadow: 2px 2px 2px #026373 !important
+
+
+.carousel-item-wrapper
+	padding-bottom: 49.5%
+	position: relative
+	width: 100%
+
+	img
+		position: absolute
+
+.carousel-text
+	height: 100%
+	width: 100%
+	position: absolute
+	z-index: 10
+
+.carousel-text-wrapper
+	height: 100%
+	display: flex
+	flex-direction: column
+	padding: 10% 0 10% 8px
+	justify-content: center
+
+.preview-text
+	margin-top: -15px
+	font-size: 3.4em
+	font-weight: 300
+	color: #39a2b8
+	line-height: 1.02
+	letter-spacing: .2px
+	margin-bottom: 28px
+
+	span
+		display: block
+		color: #006272
+
+.carousel-button
+	width: 258px
+
+.button
+	border-radius: 3px
+	background-color: rgb(57, 162, 184)
+	display: flex
+	font-weight: 300
+	justify-content: center
+	align-items: center
+	color: rgb(255, 255, 255)
+	box-shadow: 2px 2px 1px #006272
+	padding: 0.3em 0 0.5em
+	font-size: 1.5em
+	letter-spacing: 0.2px
+	transition: .2s
+
+	&:hover
+		color: rgb(255, 255, 255)
+		transform: translate(-1px, -1px)
+		box-shadow: 4px 4px 1px #006272
+
+	&:focus
+		transform: translate(2px, 2px)
+		box-shadow: 0 0 0 #006272
+
+.button
+	&:hover .button-icon-arrow
+		animation: 2s shake .3s
+
+.button-icon
+	margin-left: 17px
+
+.button-icon-arrow
+	width: 23px
+
+
+.button-all
+	position: absolute
+	right: 0
+	transform: translateY(-50%)
+	z-index: 10
+	&-link
+		display: flex
+		padding: 0.4em 1.1em
+		font-size: 1.3em
+		background: rgba(57, 162, 184, 0.8)
+		color: rgb(255, 255, 255)
+		font-weight: 300
+		justify-content: center
+		align-items: center
+		transition: background .2s
+		&:hover
+			color: rgb(255, 255, 255)
+			background: rgba(224, 62, 82, 0.8)
+	& .button-icon-arrow-down
+		margin-left: 12px
+		& svg
+			width: 20px
+
+
+.section-title
+	text-align: center
+	h2
+		font-size: 2.8em
+		color: rgb(37, 55, 70)
+		font-weight: 300
+	p
+		font-size: 1.5em
+		color: rgb(83, 86, 90)
+		line-height: 1
+		font-weight: 300
