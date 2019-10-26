@@ -28,7 +28,6 @@ function bsReload(done) { browserSync.reload(); done(); };
 gulp.task('styles', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({
-		outputStyle: 'expanded',
 		includePaths: [__dirname + '/node_modules']
 	}))
 	.pipe(concat('styles.min.css'))

@@ -37,7 +37,7 @@ body
 	overflow-y: scroll
 
 .h-88px
-	height: 88px
+	min-height: 88px
 
 .container
 	max-width: 960px
@@ -90,10 +90,17 @@ body
 
 	button
 		border: 0
-		background-color: rgb(219, 214, 210)
+		background: #39a2b8
 		width: 50px
 		height: 50px
 		display: flex
+		outline: 0
+
+		&.collapsed
+			background-color: rgb(219, 214, 210)
+
+			svg path
+				fill: #B6ADA5
 
 		svg
 			overflow: hidden
@@ -102,6 +109,12 @@ body
 			width: 55%
 			height: 55%
 			margin: auto
+
+			& path
+				fill: #fff
+
+.button-search
+	font-size: 1em !important
 
 .nav-bar
 	background-color: rgba(241, 239, 237, .7)
@@ -216,7 +229,7 @@ body
 	align-items: center
 	color: rgb(255, 255, 255)
 	box-shadow: 2px 2px 1px #006272
-	padding: 0.3em 0 0.5em
+	padding: 0.3em 0 0.3em
 	font-size: 1.5em
 	letter-spacing: 0.2px
 	transition: .2s
@@ -246,6 +259,7 @@ body
 	right: 0
 	transform: translateY(-50%)
 	z-index: 10
+
 	&-link
 		display: flex
 		padding: 0.4em 1.1em
@@ -256,23 +270,231 @@ body
 		justify-content: center
 		align-items: center
 		transition: background .2s
+
 		&:hover
 			color: rgb(255, 255, 255)
 			background: rgba(224, 62, 82, 0.8)
+
 	& .button-icon-arrow-down
 		margin-left: 12px
+
 		& svg
 			width: 20px
 
 
 .section-title
 	text-align: center
+
 	h2
 		font-size: 2.8em
 		color: rgb(37, 55, 70)
 		font-weight: 300
+
 	p
-		font-size: 1.5em
+		font-size: 1.3em
 		color: rgb(83, 86, 90)
 		line-height: 1
 		font-weight: 300
+		margin: 0
+
+.tabs-nav-item-wrap
+	display: flex
+	align-items: flex-end
+
+.tabs-nav-item-img
+	img
+		max-width: 100%
+		max-height: 100%
+		transition: .2s
+
+.tabs-nav-item-old
+	font-size: 2.2em
+	color: #39a2b8
+	font-weight: 300
+	padding: 0 0 0.1em 0.2em
+	line-height: 1
+
+	span
+		font-size: .8em
+
+.myTab
+	padding: 0 1.5%
+	border: 0
+
+	.nav-link
+		transition: .2s
+		border: 0 !important
+
+		&:hover
+			border: 0 !important
+
+	.nav-link.active
+		filter: grayscale(1)
+		border: 0 !important
+
+		.tabs-nav-item-img img
+			transform: scale(.75) translateY(25%)
+
+.tab-line
+	height: 2px
+	width: 100%
+	background: #dbd9d2
+	margin: 15px 0
+	position: relative
+
+.line-position
+	position: absolute
+	width: 200px
+	display: block
+	background-color: #dbd9d2
+	height: 14px
+	border-radius: 15px
+	transform: translateY(-50%)
+	transition: .3s
+	margin-bottom: 35px
+
+.home-image
+	padding-top: 150px
+
+	&-wrapper
+		width: 300px
+		height: 300px
+		display: flex
+		font-size: 0
+
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			width: 108px
+			height: 108px
+			position: absolute
+			left: 72%
+			bottom: 77%
+			background: url("../img/line.svg")
+
+		&:after
+			content: ''
+			display: block
+			width: 243px
+			height: 393px
+			position: absolute
+			top: -5%
+			left: 8%
+			background: url("../img/img.svg")
+			background-size: contain
+
+		img
+			width: 100%
+			height: 100%
+			mask: url("../img/mask.svg")
+			display: block
+			object-fit: cover
+
+.warning-text
+	padding: 1.2em
+	border: 1px solid #e03e52
+	border-radius: 3px
+	background: #fff
+	position: relative
+	margin-bottom: 40px
+
+	&-title
+		font-size: 1.9em
+		color: rgb(83, 86, 90)
+		text-transform: uppercase
+		text-align: center
+		font-weight: 600
+
+	&-list
+		padding: 0
+		list-style: none
+		column-count: 2
+		font-size: 1em
+		color: rgb(83, 86, 90)
+		line-height: 1.2
+		column-gap: 2.6em
+		margin: 0 0 0.5em
+
+		li
+			position: relative
+			padding-left: 1em
+			font-weight: 300
+			font-size: 1.14em
+			margin-bottom: 0.8em
+
+			b
+				font-weight: 600
+
+			&:before
+				content: ""
+				display: block
+				height: 2px
+				width: 7px
+				position: absolute
+				left: 0
+				top: .5em
+				background: #e03e52
+
+	&-button
+		position: absolute
+		bottom: 0
+		padding: 0 2em
+		background: #fff
+		left: 50%
+		transform: translate(-50%, 50%)
+		width: 265px
+		box-sizing: content-box
+		font-size: 0.77em
+
+.content-tab-title
+	font-size: 1.87em
+	color: rgb(0, 97, 113)
+	text-align: center
+	font-weight: 600
+	margin-bottom: .7em
+
+.content-tab-item-img
+	height: 67px
+
+.content-tab-item-title
+	margin-top: 0.5em
+	font-size: 1.43em
+	color: #39a2b8
+	line-height: 1.2
+	font-weight: 600
+
+.content-tab-item p
+	font-size: 1em
+	margin-top: 0.8em
+	color: #53565a
+	line-height: 1
+	font-weight: 300
+
+.tab-footer
+	padding-left: 15px
+	display: flex
+	font-size: 25px
+	color: rgb(57, 162, 184)
+	line-height: 0.84
+	font-weight: 300
+
+	img
+		margin-right: 15px
+		display: block
+
+	p
+		margin: auto
+
+.mobile-nav
+	margin-left: auto
+
+.mobile-nav .navbar-collapse
+	width: 100%
+	background: #fff
+	box-shadow: 0 6px 6px rgba(100, 100, 100, 0.31)
+	text-align: center
+
+.navbar-toggler
+	cursor: pointer

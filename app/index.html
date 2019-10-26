@@ -18,6 +18,10 @@
 					href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic"
 					rel="stylesheet">
 	<link rel="stylesheet" href="css/animate.css">
+	<script
+					src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+					integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+					crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,7 +30,7 @@
 <!-- begin header -->
 <header>
 	<div class="container position-relative">
-		<div class="row align-items-center h-88px justify-content-between">
+		<div class="row align-items-center h-88px position-relative justify-content-between">
 			
 			<!-- begin logo -->
 			<div class="logo">
@@ -36,7 +40,7 @@
 			<!-- end logo -->
 			
 			<!-- begin nav -->
-			<div class="main-nav">
+			<div class="main-nav d-none d-lg-block">
 				<nav>
 					<ul>
 						<li><a href="">О снижении слуха</a></li>
@@ -48,11 +52,35 @@
 					</ul>
 				</nav>
 			</div>
+			
 			<!-- end nav -->
 			
+			<!-- begin mobile-nav -->
+			<div class="mobile-nav d-lg-none">
+				<a
+								class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent1"
+								aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+					<svg
+									id="i-menu"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 32 32"
+									width="32"
+									height="32"
+									fill="none"
+									stroke="currentcolor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2">
+						<path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+					</svg>
+				</a>
+			
+			</div>
+			<!-- end mobile-nav -->
+			
 			<!-- begin search -->
-			<div class="search">
-				<button>
+			<div class="search d-none d-lg-block">
+				<button data-toggle="collapse" class="collapsed" data-target="#navbarSupportedContent2">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.4 21.4" class="undefined">
 						<style>.a {
 							fill: none;
@@ -70,13 +98,14 @@
 										class="b" />
 					</svg>
 				</button>
+			
 			</div>
 			<!-- end search -->
 		
 		</div>
 		
 		<!-- begin nab-bar -->
-		<div class="nav-bar">
+		<div class="nav-bar d-none d-lg-block">
 			<nav>
 				<ul>
 					<li>
@@ -181,13 +210,52 @@
 			</nav>
 		</div>
 		<!-- end nab-bar -->
+		<div class="d-none d-lg-block">
+			<div class="collapse navbar-collapse " id="navbarSupportedContent2">
+				<form>
+					<div class="row pl-3 pr-1 pb-3">
+						<div class="col-10">
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Введите название товара">
+						</div>
+						<div class="col-2">
+							<button type="submit" class="btn button w-100 button-search">Найти</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="d-block d-lg-none">
+			<div class="collapse navbar-collapse " id="navbarSupportedContent1">
+				
+				<a class="dropdown-item" href="">О снижении слуха</a>
+				<a class="dropdown-item" href="">Что делать?</a>
+				<a class="dropdown-item" href="">Слуховые аппараты</a>
+				<a class="dropdown-item" href="">ReSound</a>
+				<a class="dropdown-item" href="">Отзывы</a>
+				<a class="dropdown-item" href="">Больше о слухе</a>
+				<a class="dropdown-item" href="">Найти специалиста</a>
+				<a class="dropdown-item" href="">Проверка слуха</a>
+				<a class="dropdown-item" href="">Где купить</a>
+				<hr>
+				<form>
+					<div class="row pb-3">
+						<div class="col-8 col-sm-10">
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Введите название товара">
+						</div>
+						<div class="col-4 col-sm-2">
+							<button type="submit" class="btn button w-100 button-search">Найти</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	
 	</div>
 </header>
 <!-- end header -->
 
 <!-- begin baner -->
-<div class="baner">
+<div class="baner d-none d-md-block">
 	<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="1000000">
 		
 		<!-- begin indicator -->
@@ -207,7 +275,7 @@
 					<div class="carousel-text">
 						<div class="container h-100">
 							<div class="row h-100">
-								<div class="col-6">
+								<div class="col-8 col-lg-6">
 									<div class="carousel-text-wrapper">
 										<div class="preview-text">
 											<span>ReSound</span>
@@ -247,7 +315,7 @@
 					<div class="carousel-text">
 						<div class="container h-100">
 							<div class="row h-100">
-								<div class="col-6">
+								<div class="col-8 col-lg-6">
 									<div class="carousel-text-wrapper">
 										<div class="preview-text">
 											Здесь мог быть текст <br>:(
@@ -286,7 +354,7 @@
 					<div class="carousel-text">
 						<div class="container h-100">
 							<div class="row h-100">
-								<div class="col-6">
+								<div class="col-8 col-lg-6">
 									<div class="carousel-text-wrapper">
 										<div class="preview-text">
 											Да и здесь тоже
@@ -327,8 +395,34 @@
 </div>
 <!-- end baner -->
 
+<!-- begin mobile-top-text -->
+<div class="mobile-top-text d-block d-md-none">
+	<div class="section-title m-auto">
+		<h2>ReSound <br>
+		    Вернем мир звуков вашему ребенку вместе!</h2>
+		<p>Наши инженеры и дизайнеры создали аппараты, <br> учитывающие особенности развития детей всех возростов</p>
+		<div class="p-3">
+			<a href="#" class="button">
+				<span>Узнать больше</span>
+				<span class="button-icon button-icon-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 47.9"><style>
+														.button-icon-arrow {
+															fill: none;
+															stroke-linejoin: round;
+															stroke-width: 7;
+															stroke: #fff;
+														}
+													</style><line x1="4.3" y1="23.6" x2="69.8" y2="23.6" class="a" /><polyline
+																	points=" 50.4 43.5 69.8 24.1 50.4 4.8 "
+																	class="button-icon-arrow" /></svg>
+												</span>
+			</a>
+		</div>
+	</div>
+</div>
+<!-- end mobile-top-text -->
 
-<div class="container position-relative mb-5">
+<div class="container position-relative mb-5 d-none d-md-block">
 	<div class="button-all">
 		<a href="" class="button-all-link">
 			Познакомиться с продуктами
@@ -338,7 +432,7 @@
 	</div>
 </div>
 
-<section class="pt-4">
+<section class="pt-4 mb-5">
 	<div class="container">
 		<div class="section-title m-auto">
 			<h2>Кому подойдут решения <span>ReSound</span></h2>
@@ -346,27 +440,31 @@
 		</div>
 		
 		<!-- begin tabs -->
-		<div class="tabs">
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
+		<div class="tabs mt-2">
+			<ul class="nav nav-tabs myTab" id="myTab" role="tablist">
 				
 				<!-- begin nav-item -->
-				<li class="nav-item">
+				<li class="nav-item col-4 border-0">
 					<a
 									class="nav-link active"
-									id="home-tab"
+									id="profile-tab"
 									data-toggle="tab"
 									href="#home"
 									role="tab"
-									aria-controls="home"
-									aria-selected="true">
-						<img src="img/slider-1.svg" alt="">
-						<span>0-4 лет</span>
+									aria-controls="profile"
+									aria-selected="false">
+						<span class="tabs-nav-item-wrap">
+							<span class="tabs-nav-item-img d-none d-md-block">
+								<img src="img/slider-1.svg" width="104" height="95" alt="">
+							</span>
+							<span class="tabs-nav-item-old">0-4 <span>лет</span></span>
+						</span>
 					</a>
 				</li>
 				<!-- end nav-item -->
 				
 				<!-- begin nav-item -->
-				<li class="nav-item">
+				<li class="nav-item col-4 border-0">
 					<a
 									class="nav-link"
 									id="profile-tab"
@@ -375,34 +473,110 @@
 									role="tab"
 									aria-controls="profile"
 									aria-selected="false">
-						<img src="img/slider-1.svg" alt="">
-						<span>5-8 лет</span>
+						<span class="tabs-nav-item-wrap">
+							<span class="tabs-nav-item-img d-none d-md-block">
+								<img src="img/slider-2.svg" width="120" height="95" alt="">
+							</span>
+							<span class="tabs-nav-item-old">5-8 <span>лет</span></span>
+						</span>
 					</a>
 				</li>
 				<!-- end nav-item -->
 				
 				<!-- begin nav-item -->
-				<li class="nav-item">
+				<li class="nav-item col-4 border-0">
 					<a
 									class="nav-link"
-									id="contact-tab"
+									id="profile-tab"
 									data-toggle="tab"
 									href="#contact"
 									role="tab"
-									aria-controls="contact"
+									aria-controls="profile"
 									aria-selected="false">
-						<img src="img/slider-1.svg" alt="">
-						<span>9-16 лет</span>
+						<span class="tabs-nav-item-wrap">
+							<span class="tabs-nav-item-img d-none d-md-block">
+								<img src="img/slider-3.svg" alt="" width="99" height="93">
+							</span>
+							<span class="tabs-nav-item-old">9-16 <span>лет</span></span>
+						</span>
 					</a>
 				</li>
 				<!-- end nav-item -->
 			
 			</ul>
 			
+			<!-- begin tab-line -->
+			<div class="tab-line d-none d-md-block">
+				<div class="line-position"></div>
+			</div>
+			<!-- end tab-line -->
+			
 			<div class="tab-content" id="myTabContent">
 				
 				<!-- begin tab-pane -->
-				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">1</div>
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<div class="row">
+						<div class="col-4 d-lg-block d-none">
+							<div class="home-image">
+								<div class="home-image-wrapper">
+									<img src="img/img.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-8">
+							
+							<div class="warning-text mt-3">
+								<h3 class="warning-text-title">Я боюсь, что мой малыш:</h3>
+								<ul class="warning-text-list">
+									<li><b>Не узнает</b> мой голос</li>
+									<li><b>Не сможет познавать мир</b>, вместе с другими детьми</li>
+									<li><b>Не сможет дружить</b> с тем, с кем хотел бы</li>
+									<li><b>В опасности</b> без окружающих звуков (например звук автомобиля)</li>
+									<li><b>Не сможет</b> говорить</li>
+									<li><b>Отстанет</b> в развитии</li>
+								</ul>
+								<div class="warning-text-button">
+									<a href="#" class="button">
+										<span>Узнать о решениях</span>
+										<span class="button-icon pb-1">
+													<img src="img/mail.png"  width="20" height="23" alt="">
+												</span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="content-tab">
+								<h3 class="content-tab-title">Наши устройства позволяют ребенку</h3>
+								<div class="row">
+									<div class="col-12 col-lg-6">
+										<div class="content-tab-item">
+											<div class="content-tab-item-img">
+												<img src="img/tab-img-1.svg" width="99" height="66" alt="">
+											</div>
+											<h4 class="content-tab-item-title">Слышать окружающие звуки: голоса родителей, друзей, бабушек и
+											                                   дедушек…</h4>
+											<p>За счет обеспечения чистого звучания в любых ситуациях</p>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="content-tab-item">
+											<div class="content-tab-item-img">
+												<img src="img/tab-img-2.svg" width="110" height="61" alt="">
+											</div>
+											<h4 class="content-tab-item-title">Активно познавать мир и учиться вместе с другими детьми</h4>
+											<p>Благодаря защите от ударов и влаги</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-footer">
+								<img src="img/phone.svg" width="60" height="61" alt="">
+								<p>Вы сможете следить за настройками аппарата вашего ребенка через смартфон</p>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- end tab-pane -->
 				
 				<!-- begin tab-pane -->
